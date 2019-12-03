@@ -11,6 +11,7 @@ header {
   height: 140px;
   background-color: #404041;
   text-align: center;
+  position: relative;
 }
 
 .number-title {
@@ -25,4 +26,46 @@ header h3 {
   font-weight: lighter;
   color: white;
   text-transform: uppercase;
+}
+
+hr {
+  position: absolute;
+  top: 95px;
+}
+
+#left-line {
+  left: 467px;
+  width: 6.2%
+}
+
+#right-line {
+  right: 460px;
+  width: 6.5%;
+}
+
+/* start of column1 styling */
+
+.column1 {
+  width: 50%;
+  height: 100vh;
+  background-color: lightgrey;
+  border: 1px solid red;
+}
+
+.column1-container {
+  border: 1px solid blue;
+}
+
+.challenger1,
+.challenger2 {
+  border: 1px solid green;
+}
+
+.challenger-buttons {
+  border: 1px solid green;
+}
+
+.challenger1-guess,
+.challenger2-guess {
+  border: 1px solid yellow;
 }
