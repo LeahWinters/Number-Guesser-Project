@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Number Guesser</title>
+  </head>
+  <body>
+    <header>
+      <section>
+        <h1>Number Guesser</h1>
+        <h3>Ultimate Challenger Edition</h3>
+      </section>
+    </header>
+    <main>
+      <div class="colunm1">
+        <section class="column1-container set-range">
+          <h3>Set Range</h3>
+          <p>Min Range</p>
+          <input type="text"></input>
+          <p>Max Range</p>
+          <input type="text"></input>
+          <button type="button" id="update-button" class="button">Update</button>
+        </section>
+        <section class="column1-container challenger">
+          <p>The Current Range is 1 to 100</p>
+          <section class="challenger1">
+            <h3>Challenger 1</h3>
+            <p>Name</p>
+            <input type="text"></input>
+            <p>Guess</p>
+            <input type="text"></input>
+          </section>
+          <section class="challenger2">
+            <h3>Challenger 2</h3>
+            <p>Name</p>
+            <input type="text"></input>
+            <p>Guess</p>
+            <input type="text"></input>
+          </section>
+          <section class="challenger-buttons">
+            <button type="button" id="submit" class="button">Submit Guess</button>
+            <button type="button" id="reset" class="button">Reset Game</button>
+            <button type="button" id="clear" class="button">Clear Form</button>
+          </section>
+        </section>
+        <section class="column1-container latest-guess">
+          <div class="challenger1-guess">
+            <h3>Latest Guess</h3>
+            <p class="challenger-name">Challenger 1 Name</p>
+            <p>current guess</p>
+            <p id="guessed-num"></p>
+            <p id="return-value"></p>
+          </div>
+          <div class="challenger2-guess">
+            <p class="challenger-name">Challenger 2 Name</p>
+            <p>current guess</p>
+            <p id="guessed-num"></p>
+            <p id="return-value"></p>
+          </div>
+        </section>
+      </div>
+      <div class="colunm2">
+
+      </div>
+    </main>
+  </body>
+</html>
