@@ -3,6 +3,7 @@
   padding: 0;
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
+  color: #606060;
 }
 
 /* styling for header */
@@ -47,11 +48,67 @@ header h3 {
   border: 1px solid white;
 }
 
-
 .column1-container {
   /* border: 1px solid blue; */
   background-color: white;
   margin: 25px;
+}
+
+.set-range{
+  display: flex;
+  padding-top: 14px;
+  padding-left: 15px;
+  padding-bottom: 32px;
+  justify-content: center;
+  height: 145px;
+  border: 1px solid #b5b5b4
+}
+
+.box1{
+  flex: 1;
+  align-self: center;
+}
+
+.box2{
+  flex: 1;
+  align-self: center;
+  padding-top: 31px;
+  padding-left: 25px;
+}
+
+.box3{
+  flex: 1;
+  align-self: center;
+  padding-right: 20px;
+  padding-top: 8%;
+  margin-left: 20px;
+  padding-left: 50px;
+}
+
+.range-header{
+  font-size: 20px;
+  color: #404041;
+  padding-bottom: 4px;
+}
+
+.range-text{
+  font-size: 18px;
+}
+
+.range-input{
+  width: 195px;
+  height: 42px;
+}
+
+.update-button{
+  width: 130px;
+  padding: 8px;
+  border-radius: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+  background-color: #d0d2d3;
+  color: white;
+  font-weight: bold;
 }
 
 .challenger b {
@@ -89,6 +146,7 @@ header h3 {
   padding-bottom: 5px;
   /* font-size: 22px; */
   height: 25px;
+  font-size: 18px;
 }
 
 .guess-label {
@@ -101,13 +159,13 @@ header h3 {
 
 .name-input {
   width: 60%;
-  height: 35px;
+  height: 42px;
   margin-right: 10px;
 }
 
 .guess-input {
   width: 37.7%;
-  height: 35px;
+  height: 42px;
 }
 
 .challenger-buttons {
@@ -134,6 +192,7 @@ header h3 {
 .latest-guess {
   padding: 10px 20px 15px;
   border: 1px solid #b5b5b4;
+  font-size: 18px;
 }
 
 .latest-guess-title {
@@ -158,4 +217,5 @@ header h3 {
 
 .column2 {
   background-color: #d0d2d3;
+  color: #dd1972;
 }

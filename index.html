@@ -17,12 +17,18 @@
     <main>
       <div class="column1">
         <section class="column1-container set-range">
-          <h3>Set Range</h3>
-          <p>Min Range</p>
-          <input type="text"></input>
-          <p>Max Range</p>
-          <input type="text"></input>
-          <button type="button" id="update-button" class="button">Update</button>
+          <div class="box1">
+            <h3 class="range-header">Set Range</h3>
+            <p class="range-text">Min Range</p>
+            <input type="text" class="range-input"></input>
+          </div>
+          <div class="box2">
+            <p class="range-text">Max Range</p>
+            <input type="text" class="range-input"></input>
+          </div>
+          <div class="box3">
+            <button type="button" id="update-button" class="update-button">update</button>
+          </div>
         </section>
         <form class="challenger-form">
           <section class="column1-container challenger">
@@ -72,15 +78,15 @@
             <div class="challenger1-guess">
               <h3 class="challenger-name">Challenger 1 Name</h3>
               <p>current guess</p>
-              <p id="guessed-num">20</p>
-              <p id="return-value">thats too high</p>
+              <p id="guessed-num"></p>
+              <p id="return-value"></p>
             </div>
             <hr id="guess-line">
             <div class="challenger2-guess">
               <h3 class="challenger-name">Challenger 2 Name</h3>
               <p>current guess</p>
-              <p id="guessed-num">10</p>
-              <p id="return-value">thats too low</p>
+              <p id="guessed-num"></p>
+              <p id="return-value"></p>
             </div>
           </div>
         </section>
