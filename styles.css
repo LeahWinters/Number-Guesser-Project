@@ -43,7 +43,6 @@ header h3 {
 
 .column1 {
   width: 50%;
-  height: 100vh;
   background-color: #f7f7f7;
   border: 1px solid white;
 }
@@ -150,5 +149,6 @@ header h3 {
 }
 
 #guessed-num {
-  height: 20px;
+  height: 90px;
+  font-size: 70px;
 }
