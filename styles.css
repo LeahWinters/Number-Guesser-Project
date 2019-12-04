@@ -65,8 +65,11 @@ hr {
 
 .set-range{
   display: flex;
-  padding: 14px;
+  padding-top: 14px;
+  padding-left: 15px;
+  padding-bottom: 32px;
   justify-content: center;
+  height: 145px;
 
 }
 
@@ -78,29 +81,37 @@ hr {
 .box2{
   flex: 1;
   align-self: center;
+  padding-top: 31px;
+  padding-left: 25px;
 }
+
 
 .box3{
   flex: 1;
   align-self: center;
+  padding-right: 20px;
+  padding-top: 8%;
+  margin-left: 20px;
+  padding-left: 50px;
 }
 
 .range-header{
   font-size: 20px;
-  color: #404041
+  color: #404041;
+  padding-bottom: 4px;
 }
 
 .range-text{
   font-size: 17.5px;
-  
+
 }
 
 .range-input{
-  width: 150px;
-  height: 34px;
+  width: 195px;
+  height: 42px;
 }
 
-.button{
+.update-button{
   width: 130px;
   height: 40px;
   border-radius: 21px;
