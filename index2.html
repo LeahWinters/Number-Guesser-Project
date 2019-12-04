@@ -2,10 +2,11 @@
 <html>
   <head>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <title>test</title>
   </head>
   <body>
-    <div class="column1">
+    <form class="column1">
       <section class="column1-container challenger">
         <p>The Current Range is <b>1</b> to <b>100</b></p>
         <section class="challenger1">
@@ -31,11 +32,44 @@
           </div>
         </section>
         <section class="challenger-buttons">
-          <button type="button" id="submit" class="button">Submit Guess</button>
-          <button type="button" id="reset" class="button">Reset Game</button>
-          <button type="button" id="clear" class="button">Clear Form</button>
+
+          <div class="button">
+            <input type="submit" value="Submit Guess">
+          </div>
+
+          <div class="button">
+            <input type="submit" value="Reset Game">
+          </div>
+
+          <div class="button">
+            <input type="submit" value="Clear Form">
+          </div>
         </section>
       </section>
-    </div>
+    </form>
+
+    <!-- <section class="column1-container challenger">
+      <p>The Current Range is <b>1</b> to <b>100</b></p>
+      <section class="challenger1">
+        <h3>Challenger 1</h3>
+        <p>Name</p>
+        <input type="text"></input>
+        <p>Guess</p>
+        <input type="text"></input>
+      </section>
+      <section class="challenger2">
+        <h3>Challenger 2</h3>
+        <p>Name</p>
+        <input class="name"></input>
+        <p>Guess</p>
+        <input class="guess"></input>
+      </section>
+      <section class="challenger-buttons">
+        <button type="button" id="submit" class="button">Submit Guess</button>
+        <button type="button" id="reset" class="button">Reset Game</button>
+        <button type="button" id="clear" class="button">Clear Form</button>
+      </section>
+    </section> -->
+    
   </body>
 </html>
