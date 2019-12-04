@@ -211,5 +211,11 @@ header h3 {
   height: 90px;
   font-size: 70px;
   font-weight: bold;
+}
+
+/* start of colunm2 styling */
+
+.column2 {
+  background-color: #d0d2d3;
   color: #dd1972;
 }
