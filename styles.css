@@ -63,6 +63,54 @@ hr {
   margin: 25px;
 }
 
+.set-range{
+  display: flex;
+  padding: 14px;
+  justify-content: center;
+
+}
+
+.box1{
+  flex: 1;
+  align-self: center;
+}
+
+.box2{
+  flex: 1;
+  align-self: center;
+}
+
+.box3{
+  flex: 1;
+  align-self: center;
+}
+
+.range-header{
+  font-size: 20px;
+  color: #404041
+}
+
+.range-text{
+  font-size: 17.5px;
+  
+}
+
+.range-input{
+  width: 150px;
+  height: 34px;
+}
+
+.button{
+  width: 130px;
+  height: 40px;
+  border-radius: 21px;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: #d0d2d3;
+  color: white;
+  font-weight: bold;
+}
+
 .challenger1,
 .challenger2 {
   border: 1px solid green;
