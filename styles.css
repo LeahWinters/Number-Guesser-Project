@@ -222,6 +222,17 @@ header h3 {
   font-weight: bold;
 }
 
+#return-value {
+  font-size: 21px;
+}
+
+/* styling suedo elements for left column */
+
+button:hover,
+.button input:hover {
+  background-color: #dd1792
+}
+
 /* start of colunm2 styling */
 
 .column2 {
