@@ -14,7 +14,6 @@ header {
   background-color: #404041;
   color: #dd1972;
   text-align: center;
-  /* position: relative; */
 }
 
 main {
@@ -22,7 +21,7 @@ main {
 }
 
 strong {
-  color: #dd1972
+  color: #dd1972;
 }
 
 .number-title {
@@ -58,7 +57,6 @@ header h3 {
 }
 
 .column1-container {
-  /* border: 1px solid blue; */
   background-color: white;
   margin: 25px;
 }
@@ -138,13 +136,11 @@ header h3 {
 
 .challenger p {
   padding-bottom: 20px;
-  /* font-size: 22px; */
 }
 
 .challenger-title,
 .challenger-title-2 {
   padding-bottom: 4px;
-  /* font-size: 24px; */
 }
 
 .challenger-title-2 {
@@ -153,7 +149,6 @@ header h3 {
 
 .labels-input {
   padding-bottom: 5px;
-  /* font-size: 22px; */
   height: 25px;
   font-size: 18px;
 }
