@@ -213,7 +213,30 @@ header h3 {
   text-align: center;
 }
 
-#guessed-num {
+#guessed-num1 {
+  height: 90px;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+#return-value {
+  font-size: 21px;
+}
+
+/* styling suedo elements for left column */
+
+button:hover,
+.button input:hover {
+  background-color: #dd1792
+}
+
+/* start of colunm2 styling */
+
+.column2 {
+  background-color: #d0d2d3;
+}
+
+#guessed-num2 {
   height: 90px;
   font-size: 70px;
   font-weight: bold;
