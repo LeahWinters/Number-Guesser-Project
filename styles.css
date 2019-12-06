@@ -12,12 +12,20 @@ header {
   width: 100%;
   height: 140px;
   background-color: #404041;
+  color: #dd1972;
   text-align: center;
-  /* position: relative; */
+}
+
+main {
+  display: flex;
+}
+
+strong {
+  color: #dd1972;
 }
 
 .number-title {
-  color: #DD1970;
+  color: #dd1972;
   text-transform: uppercase;
   font-size: 60px;
   font-weight: lighter;
@@ -42,14 +50,13 @@ header h3 {
 
 /* start of column1 styling */
 
-.column1 {
+.column1,
+.column2{
   width: 50%;
   background-color: #f7f7f7;
-  border: 1px solid white;
 }
 
 .column1-container {
-  /* border: 1px solid blue; */
   background-color: white;
   margin: 25px;
 }
@@ -131,13 +138,11 @@ header h3 {
 
 .challenger p {
   padding-bottom: 20px;
-  /* font-size: 22px; */
 }
 
 .challenger-title,
 .challenger-title-2 {
   padding-bottom: 4px;
-  /* font-size: 24px; */
 }
 
 .challenger-title-2 {
@@ -146,7 +151,6 @@ header h3 {
 
 .labels-input {
   padding-bottom: 5px;
-  /* font-size: 22px; */
   height: 25px;
   font-size: 18px;
 }
@@ -220,5 +224,21 @@ header h3 {
   height: 90px;
   font-size: 70px;
   font-weight: bold;
-  color: #dd1972;
+}
+
+#return-value {
+  font-size: 21px;
+}
+
+/* styling suedo elements for left column */
+
+button:hover,
+.button input:hover {
+  background-color: #dd1792
+}
+
+/* start of colunm2 styling */
+
+.column2 {
+  background-color: #d0d2d3;
 }
