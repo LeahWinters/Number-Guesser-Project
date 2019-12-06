@@ -163,13 +163,15 @@ header h3 {
   height: 40px;
 }
 
-.name-input {
+.name-input,
+.name-input2 {
   width: 60%;
   height: 42px;
   margin-right: 10px;
 }
 
-.guess-input {
+.guess-input,
+.guess-input2 {
   width: 37.7%;
   height: 42px;
 }
@@ -181,7 +183,7 @@ header h3 {
 }
 
 .button input {
-  background-color: #d0d2d3;
+  background-color: #6e6e6e;
   border: none;
   text-decoration: none;
   text-transform: uppercase;
@@ -251,6 +253,10 @@ button:hover,
 button:hover,
 .button input:hover {
   background-color: #dd1792
+}
+
+.button input:disabled {
+  background-color: #d0d2d3;
 }
 
 /* start of colunm2 styling */
