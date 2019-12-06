@@ -30,7 +30,7 @@
             <button type="button" id="update-button" class="update-button">update</button>
           </div>
         </section>
-        <form class="challenger-form">
+        <form class="challenger-form" id="gamer-form">
           <section class="column1-container challenger">
             <p>The Current Range is <b>1</b> to <b>100</b></p>
             <section class="challenger1">
@@ -40,8 +40,8 @@
                 <label class="guess-label">Guess</label>
               </div>
               <div class='input-fields'>
-                <input type="text" class="name-input"></input>
-                <input type="text" class="guess-input"></input>
+                <input type="text" class="name-input" id="name-text1"></input>
+                <input type="text" class="guess-input" id="guess-num1"></input>
               </div>
             </section>
             <section class="challenger2">
@@ -51,19 +51,19 @@
                 <label class="guess-label">Guess</label>
               </div>
               <div class='input-fields'>
-                <input type="text" class="name-input"></input>
-                <input type="text" class="guess-input"></input>
+                <input type="text" class="name-input" id="name-text2"></input>
+                <input type="text" class="guess-input" id="guess-num2"></input>
               </div>
             </section>
             <section class="challenger-buttons">
               <div class="button">
-                <input type="submit" value="Submit Guess">
+                <input type="submit" value="Submit Guess" disabled="disabled" id="submit-btn">
               </div>
               <div class="button">
-                <input type="submit" value="Reset Game">
+                <input type="submit" value="Reset Game"  id="reset-btn" disabled>
               </div>
               <div class="button">
-                <input type="submit" value="Clear Form">
+                <input type="submit" value="Clear Form" id="clear-btn">
               </div>
             </section>
           </section>
