@@ -25,7 +25,7 @@ function checkInputFields(){
   if(player1Name.value.length > 0 && player1Guess.value.length > 0 && player2Name.value.length > 0 && player2Guess.value.length > 0){
     submitButton.disabled = false;
     submitButton.style.backgroundColor = "#6e6e6e";
-    } else {
+    }else {
       submitButton.disabled = true;
       submitButton.style.backgroundColor = "#d0d2d3";
   }
@@ -38,6 +38,11 @@ function clearInputs(){
   player2Guess.value = "";
 }
 
+
+function clearText(){
+  player1Guess.value = "";
+  player2Guess.value = "";
+
 // I want to take the text form input fields and populate the fields
 
 function submitGuess(e){
@@ -45,4 +50,5 @@ function submitGuess(e){
   debugger
   innerTextOutput1.innerText = source1.value;
   innerTextOutput2.innerText = source2.value;
+
 }
