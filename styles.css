@@ -1,3 +1,10 @@
+@media only screen and (max-width 900px) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -52,7 +59,7 @@ header h3 {
 
 .column1,
 .column2{
-  width: 50%;
+  flex: 1;
   background-color: #f7f7f7;
 }
 

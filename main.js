@@ -11,8 +11,10 @@ var source2 = document.getElementById('guess-num2');
 var innerTextOutput2= document.getElementById('guessed-num2');
 
 challengerForm.addEventListener("keyup", checkInputFields);
+challengerForm.addEventListener("keyup", checkInputFields2);
 clearButton.addEventListener("click", clearInputs);
 submitButton.addEventListener("click", submitGuess);
+// submitButton.addEventListener("click", clearText);
 
 function checkInputFields(){
   if(player1Name.value.length > 0 || player1Guess.value.length > 0 || player2Name.value.length > 0 || player2Guess.value.length > 0){
@@ -22,6 +24,9 @@ function checkInputFields(){
        clearButton.disabled = true;
        clearButton.style.backgroundColor = "#d0d2d3";
      }
+   }
+
+function checkInputFields2() {
   if(player1Name.value.length > 0 && player1Guess.value.length > 0 && player2Name.value.length > 0 && player2Guess.value.length > 0){
     submitButton.disabled = false;
     submitButton.style.backgroundColor = "#6e6e6e";
@@ -39,16 +44,16 @@ function clearInputs(){
 }
 
 
+function submitGuess(){
+  innerTextOutput1.innerText = source1.value;
+  innerTextOutput2.innerText = source2.value;
+  clearInputs();
+  clearText();
+}
+
+// this chunk of code is prohibiting our buttons to work
+
 function clearText(){
   player1Guess.value = "";
   player2Guess.value = "";
-
-// I want to take the text form input fields and populate the fields
-
-function submitGuess(e){
-  e.preventDefault();
-  debugger
-  innerTextOutput1.innerText = source1.value;
-  innerTextOutput2.innerText = source2.value;
-
 }
