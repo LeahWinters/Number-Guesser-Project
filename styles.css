@@ -222,33 +222,12 @@ header h3 {
   text-align: center;
 }
 
-#guessed-num1 {
-  height: 90px;
-  font-size: 70px;
-  font-weight: bold;
-}
-
-#return-value {
-  font-size: 21px;
-}
-
-/* styling suedo elements for left column */
-
-button:hover,
-.button input:hover {
-  background-color: #dd1792
-}
-
-/* start of colunm2 styling */
-
-.column2 {
-  background-color: #d0d2d3;
-}
-
+#guessed-num1,
 #guessed-num2 {
   height: 90px;
   font-size: 70px;
   font-weight: bold;
+  color: #dd1792;
 }
 
 #return-value {
@@ -259,15 +238,22 @@ button:hover,
 
 button:hover,
 .button input:hover {
-  background-color: #dd1792
-}
-
-.button input:disabled {
-  background-color: #d0d2d3;
+  background-color: #dd1792;
 }
 
 /* start of colunm2 styling */
 
 .column2 {
+  background-color: #d0d2d3;
+}
+
+#return-value {
+  font-size: 21px;
+}
+
+/* styling suedo elements for left column */
+
+
+.button input:disabled {
   background-color: #d0d2d3;
 }
