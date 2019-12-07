@@ -10,24 +10,26 @@ var innerTextOutput1 = document.getElementById('guessed-num1');
 var source2 = document.getElementById('guess-num2');
 var innerTextOutput2= document.getElementById('guessed-num2');
 
-challengerForm.addEventListener("keyup", checkInputFields);
+challengerForm.addEventListener("input", checkInputFields);
+challengerForm.addEventListener("keyup", checkInputFields2);
 clearButton.addEventListener("click", clearInputs);
 submitButton.addEventListener("click", submitGuess);
+// submitButton.addEventListener("click", clearText);
 
 function checkInputFields(){
   if(player1Name.value.length > 0 || player1Guess.value.length > 0 || player2Name.value.length > 0 || player2Guess.value.length > 0){
      clearButton.disabled = false;
-      clearButton.style.backgroundColor = "#6e6e6e";
      } else {
        clearButton.disabled = true;
-       clearButton.style.backgroundColor = "#d0d2d3";
+
      }
+   }
+
+function checkInputFields2() {
   if(player1Name.value.length > 0 && player1Guess.value.length > 0 && player2Name.value.length > 0 && player2Guess.value.length > 0){
     submitButton.disabled = false;
-    submitButton.style.backgroundColor = "#6e6e6e";
     }else {
       submitButton.disabled = true;
-      submitButton.style.backgroundColor = "#d0d2d3";
   }
 }
 
@@ -39,16 +41,19 @@ function clearInputs(){
 }
 
 
+function submitGuess(){
+  innerTextOutput1.innerText = source1.value;
+  innerTextOutput2.innerText = source2.value;
+  clearText();
+  clearButton.disabled = true;
+  checkInputFields2();
+}
+
+// this chunk of code is prohibiting our buttons to work
+
 function clearText(){
   player1Guess.value = "";
   player2Guess.value = "";
-
-// I want to take the text form input fields and populate the fields
-
-function submitGuess(e){
-  e.preventDefault();
-  debugger
-  innerTextOutput1.innerText = source1.value;
-  innerTextOutput2.innerText = source2.value;
-
 }
+
+// we want the buttons to disable after we click submit buttons
