@@ -38,7 +38,17 @@ function clearInputs(){
   player2Guess.value = "";
 }
 
+<<<<<<< HEAD
 function clearText(){
   player1Guess.value = "";
   player2Guess.value = "";
+=======
+// I want to take the text form input fields and populate the fields
+
+function submitGuess(e){
+  e.preventDefault();
+  debugger
+  innerTextOutput1.innerText = source1.value;
+  innerTextOutput2.innerText = source2.value;
+>>>>>>> master
 }
