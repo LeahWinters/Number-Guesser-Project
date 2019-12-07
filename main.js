@@ -5,6 +5,10 @@ var player1Guess = document.getElementById("guess-num1");
 var player2Name = document.getElementById("name-text2");
 var player2Guess = document.getElementById("guess-num2");
 var submitButton = document.getElementById("submit-btn");
+var source1 = document.getElementById('guess-num1');
+var innerTextOutput1 = document.getElementById('guessed-num1');
+var source2 = document.getElementById('guess-num2');
+var innerTextOutput2= document.getElementById('guessed-num2');
 
 challengerForm.addEventListener("keyup", checkInputFields);
 clearButton.addEventListener("click", clearInputs);
