@@ -255,10 +255,13 @@ button:hover,
   background-color: #dd1792
 }
 
+<<<<<<< Updated upstream
 .button input:disabled {
   background-color: #d0d2d3;
 }
 
+=======
+>>>>>>> Stashed changes
 /* start of colunm2 styling */
 
 .column2 {
