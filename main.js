@@ -5,6 +5,10 @@ var player1Guess = document.getElementById("guess-num1");
 var player2Name = document.getElementById("name-text2");
 var player2Guess = document.getElementById("guess-num2");
 var submitButton = document.getElementById("submit-btn");
+var source1 = document.getElementById('guess-num1');
+var innerTextOutput1 = document.getElementById('guessed-num1');
+var source2 = document.getElementById('guess-num2');
+var innerTextOutput2= document.getElementById('guessed-num2');
 
 challengerForm.addEventListener("keyup", checkInputFields);
 clearButton.addEventListener("click", clearInputs);
@@ -34,15 +38,11 @@ function clearInputs(){
   player2Guess.value = "";
 }
 
+// I want to take the text form input fields and populate the fields
+
 function submitGuess(e){
   e.preventDefault();
-  console.log("heyyyy");
-  var nameOne = document.getElementById("name1");
-  nameOne.innerText = player1Name.value;
-  var numOne = document.getElementById("guessed-num1");
-  numOne.innerText = player1Guess.value;
-  var nameTwo = document.getElementById("name2");
-  nameTwo.innerText = player2Name.value;
-  var numTwo = document.getElementById("guessed-num2");
-  numTwo.innerText = player2Guess.value;
+  debugger
+  innerTextOutput1.innerText = source1.value;
+  innerTextOutput2.innerText = source2.value;
 }
