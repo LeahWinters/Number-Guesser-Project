@@ -65,7 +65,6 @@ function submitGuess() {
   clearButton.disabled = true;
   guessResult1();
   checkInputFields2();
-
 }
 
 function clearText() {
@@ -105,8 +104,6 @@ function activateUpdateBtn() {
 }
 
 function updateMinMax() {
-
-
   minInput.value = minNum.value;
   maxInput.value = maxNum.value;
   updateButton.disabled = false;

@@ -261,3 +261,48 @@ button:hover,
 #update-btn:disabled {
   background-color: #d0d2d3;
 }
+
+/* styling for game card */
+.game-card {
+  margin: 25px;
+  padding:15px;
+  border: 1px solid #b5b5b4;
+  background-color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card-title {
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-title p {
+  font-weight: bold;
+}
+
+.challenger-winner {
+  margin: 3%;
+  font-size: 30px;
+}
+
+#card-name {
+  font-weight: bold;
+}
+
+#winner {
+  font-weight: 200;
+}
+
+.card-stats {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid lightgray;
+  padding-top: 5px;
+}
+
+.card-stats span {
+  font-weight: bold;
+}
