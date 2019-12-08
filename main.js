@@ -13,22 +13,11 @@ var randomNum = generateNum();
 var returnVal1 = document.getElementById("return-value1");
 var returnVal2 = document.getElementById("return-value2");
 var updateButton = document.getElementById("update-btn");
-var minNum = document.getElementById("min-num");
-var maxNum = document.getElementById("max-num");
-var minInput = document.getElementById("min-input");
-var maxInput = document.getElementById("max-input");
-
-
 
 challengerForm.addEventListener("input", checkInputFields);
 challengerForm.addEventListener("keyup", checkInputFields2);
 clearButton.addEventListener("click", clearInputs);
 submitButton.addEventListener("click", submitGuess);
-minInput.addEventListener("input", activateUpdateBtn);
-maxInput.addEventListener("input", activateUpdateBtn);
-updateButton.addEventListener("click", updateMinMax);
-
-
 
 function generateNum() {
   return Math.round(Math.random() * 100)
@@ -91,22 +80,29 @@ function guessResult2() {
   } else {
     returnVal2.innerText = "BOOM!";
   }
-  clearText();
 }
 
 // js for min max range box1
+var minNum = document.getElementById("min-num");
+var maxNum = document.getElementById("max-num");
+var minInput = document.getElementById("min-input");
+var maxInput = document.getElementById("max-input");
+
+minInput.addEventListener("input", activateUpdateBtn);
+maxInput.addEventListener("input", activateUpdateBtn);
+updateButton.addEventListener("click", updateMinMax);
+
 function activateUpdateBtn() {
   if(minInput.value.length > 0 && maxInput.value.length > 0) {
     updateButton.disabled = false;
-    } else {
+  } else {
       updateButton.disabled = true;
   }
 }
 
 function updateMinMax() {
-  minInput.value = minNum.value;
-  maxInput.value = maxNum.value;
-  updateButton.disabled = false;
-
-  console.log(minInput.value, maxInput.value);
+  minNum.innerText = minInput.value;
+  maxNum.innerText = maxInput.value;
+  console.log(minInput.value);
+  clearText();
 }
