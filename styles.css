@@ -127,8 +127,9 @@ header h3 {
 
 /* Start styling for Challenger Form */
 
-.challenger b {
+.challenger span {
   text-decoration: underline;
+  font-weight: bold;
 }
 
 .challenger {
@@ -247,9 +248,9 @@ button:hover,
   background-color: #d0d2d3;
 }
 
-#return-value {
+/* #return-value {
   font-size: 21px;
-}
+} */
 
 /* styling suedo elements for left column */
 
@@ -283,6 +284,10 @@ button:hover,
   font-weight: bold;
 }
 
+#vs {
+  text-transform: lowercase;
+}
+
 .challenger-winner {
   margin: 3%;
   font-size: 30px;
@@ -305,4 +310,20 @@ button:hover,
 
 .card-stats span {
   font-weight: bold;
+}
+
+.card-stats button {
+  background-color: #6e6e6e;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+img {
+height: 12px;
+padding-top: 2px;
+}
+
+.card-time {
+  margin-right: 8%;
 }
