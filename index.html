@@ -20,19 +20,19 @@
           <div class="box1">
             <h3 class="range-header">Set Range</h3>
             <p class="range-text">Min Range</p>
-            <input type="number" class="range-input"></input>
+            <input type="number" class="range-input" id="min-input"></input>
           </div>
           <div class="box2">
             <p class="range-text">Max Range</p>
-            <input type="number" class="range-input"></input>
+            <input type="number" class="range-input" id="max-input"></input>
           </div>
           <div class="box3">
-            <button type="button" id="update-button" class="update-button">update</button>
+            <input type="button" value="update" id="update-btn" disabled>
           </div>
         </section>
         <form class="challenger-form" id="gamer-form">
           <section class="column1-container challenger">
-            <p>The Current Range is <span><b>1</b></span> to <span><b>100</b></span></p>
+            <p>The Current Range is <span id="min-num">1</span> to <span id="max-num">100</span></p>
             <section class="challenger1">
               <h3 class="challenger-title">Challenger 1</h3>
               <div class="labels-input">
@@ -75,21 +75,34 @@
               <h3 class="challenger-name" id="name1">Challenger 1 Name</h3>
               <p>current guess</p>
               <p id="guessed-num1"></p>
-              <p id="return-value1">no guesses yet!</p>
+              <p class="guess-text" id="return-value1">no guesses yet!</p>
             </div>
             <hr id="guess-line">
             <div class="challenger2-guess">
               <h3 class="challenger-name" id="name2">Challenger 2 Name</h3>
               <p>current guess</p>
               <p id="guessed-num2"></p>
-              <p id="return-value2">no guesses yet!</p>
+              <p class="guess-text" id="return-value2">no guesses yet!</p>
             </div>
           </div>
         </section>
       </div>
 
       <div class="column2">
-
+        <div class="game-card" id="challenger1-card">
+          <section class="card-title">
+            <p>challenger 1 name</p> <span id="vs">vs</span> <p>challenger 2 name</p>
+          </section>
+          <section class="challenger-winner">
+            <h3 id="card-name">Challenger 2 name</h3>
+            <p id="winner">winner</p>
+          </section>
+          <section class="card-stats">
+            <p class="card-guess-num"><span id="">47</span> guesses</p>
+            <p class="card-time"><span>1</span> minute <span>35</span> second</p>
+            <button class="close-card"> <img src="https://image.flaticon.com/icons/svg/458/458595.svg" alt="x image for close button"> </button>
+          </section>
+        </div>
       </div>
 
     </main>

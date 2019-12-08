@@ -114,21 +114,22 @@ header h3 {
   height: 42px;
 }
 
-.update-button{
+#update-btn{
   width: 130px;
   padding: 8px;
   border-radius: 20px;
   font-size: 18px;
   text-transform: uppercase;
-  background-color: #d0d2d3;
+  background-color: #6e6e6e;
   color: white;
   font-weight: bold;
 }
 
 /* Start styling for Challenger Form */
 
-.challenger b {
+.challenger span {
   text-decoration: underline;
+  font-weight: bold;
 }
 
 .challenger {
@@ -230,9 +231,9 @@ header h3 {
   color: #dd1792;
 }
 
-#return-value {
+/* #return-value {
   font-size: 21px;
-}
+} */
 
 /* styling suedo elements for left column */
 
@@ -247,7 +248,7 @@ button:hover,
   background-color: #d0d2d3;
 }
 
-#return-value {
+.guess-text {
   font-size: 21px;
 }
 
@@ -256,4 +257,74 @@ button:hover,
 
 .button input:disabled {
   background-color: #d0d2d3;
+}
+
+#update-btn:disabled {
+  background-color: #d0d2d3;
+}
+
+/* styling for game card */
+.game-card {
+  margin: 25px 40px;
+  padding:15px;
+  border: 1px solid #b5b5b4;
+  background-color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.card-title {
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card-title p {
+  font-weight: bold;
+}
+
+#vs {
+  text-transform: lowercase;
+}
+
+.challenger-winner {
+  margin: 3%;
+  font-size: 30px;
+}
+
+#card-name {
+  font-weight: bold;
+}
+
+#winner {
+  font-weight: 200;
+}
+
+.card-stats {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid lightgray;
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+.card-stats span {
+  font-weight: bold;
+}
+
+.card-stats button {
+  background-color: #6e6e6e;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+img {
+height: 12px;
+padding-top: 2px;
+}
+
+.card-time {
+  margin-right: 8%;
 }

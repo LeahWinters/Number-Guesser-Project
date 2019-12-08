@@ -12,13 +12,12 @@ var challenger2Name = document.getElementById("name2");
 var randomNum = generateNum();
 var returnVal1 = document.getElementById("return-value1");
 var returnVal2 = document.getElementById("return-value2");
-// var playerGuess = document.getElementsById("")
+var updateButton = document.getElementById("update-btn");
 
 challengerForm.addEventListener("input", checkInputFields);
 challengerForm.addEventListener("keyup", checkInputFields2);
 clearButton.addEventListener("click", clearInputs);
 submitButton.addEventListener("click", submitGuess);
-// submitButton.addEventListener("click", guessResult1);
 
 function generateNum() {
   return Math.round(Math.random() * 100)
@@ -55,7 +54,6 @@ function submitGuess() {
   clearButton.disabled = true;
   guessResult1();
   checkInputFields2();
-
 }
 
 function clearText() {
@@ -64,7 +62,6 @@ function clearText() {
 }
 
 function guessResult1() {
-  console.log(randomNum, player1Guess.value)
   if (player1Guess.value < randomNum) {
      returnVal1.innerText = "That's too low!";
   } else if (player1Guess.value > randomNum) {
@@ -73,11 +70,9 @@ function guessResult1() {
     returnVal1.innerText = "BOOM!";
   }
   guessResult2();
-
 }
 
 function guessResult2() {
-  console.log(randomNum, player2Guess.value)
   if (player2Guess.value < randomNum) {
      returnVal2.innerText = "That's too low!";
   } else if (player2Guess.value > randomNum) {
@@ -85,5 +80,29 @@ function guessResult2() {
   } else {
     returnVal2.innerText = "BOOM!";
   }
+}
+
+// js for min max range box1
+var minNum = document.getElementById("min-num");
+var maxNum = document.getElementById("max-num");
+var minInput = document.getElementById("min-input");
+var maxInput = document.getElementById("max-input");
+
+minInput.addEventListener("input", activateUpdateBtn);
+maxInput.addEventListener("input", activateUpdateBtn);
+updateButton.addEventListener("click", updateMinMax);
+
+function activateUpdateBtn() {
+  if(minInput.value.length > 0 && maxInput.value.length > 0) {
+    updateButton.disabled = false;
+  } else {
+      updateButton.disabled = true;
+  }
+}
+
+function updateMinMax() {
+  minNum.innerText = minInput.value;
+  maxNum.innerText = maxInput.value;
+  console.log(minInput.value);
   clearText();
 }
