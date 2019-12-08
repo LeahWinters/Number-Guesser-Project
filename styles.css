@@ -114,13 +114,13 @@ header h3 {
   height: 42px;
 }
 
-.update-button{
+#update-btn{
   width: 130px;
   padding: 8px;
   border-radius: 20px;
   font-size: 18px;
   text-transform: uppercase;
-  background-color: #d0d2d3;
+  background-color: #6e6e6e;
   color: white;
   font-weight: bold;
 }
@@ -255,5 +255,9 @@ button:hover,
 
 
 .button input:disabled {
+  background-color: #d0d2d3;
+}
+
+#update-btn:disabled {
   background-color: #d0d2d3;
 }
