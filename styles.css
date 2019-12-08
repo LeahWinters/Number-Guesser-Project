@@ -231,9 +231,9 @@ header h3 {
   color: #dd1792;
 }
 
-#return-value {
+/* #return-value {
   font-size: 21px;
-}
+} */
 
 /* styling suedo elements for left column */
 
@@ -248,9 +248,9 @@ button:hover,
   background-color: #d0d2d3;
 }
 
-/* #return-value {
+.guess-text {
   font-size: 21px;
-} */
+}
 
 /* styling suedo elements for left column */
 
@@ -265,7 +265,7 @@ button:hover,
 
 /* styling for game card */
 .game-card {
-  margin: 25px;
+  margin: 25px 40px;
   padding:15px;
   border: 1px solid #b5b5b4;
   background-color: white;
@@ -275,7 +275,7 @@ button:hover,
 
 .card-title {
   border-bottom: 1px solid lightgray;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   display: flex;
   justify-content: space-around;
 }
@@ -305,7 +305,8 @@ button:hover,
   display: flex;
   justify-content: space-between;
   border-top: 1px solid lightgray;
-  padding-top: 5px;
+  padding-top: 10px;
+  font-size: 18px;
 }
 
 .card-stats span {
