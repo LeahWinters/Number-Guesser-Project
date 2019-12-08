@@ -20,7 +20,7 @@ clearButton.addEventListener("click", clearInputs);
 submitButton.addEventListener("click", submitGuess);
 
 function generateNum() {
-  return Math.round(Math.random() * 100)
+  return Math.round(Math.random() * 100);
 }
 
 function checkInputFields() {
@@ -80,6 +80,7 @@ function guessResult2() {
   } else {
     returnVal2.innerText = "BOOM!";
   }
+  clearText();
 }
 
 // js for min max range box1
@@ -100,9 +101,23 @@ function activateUpdateBtn() {
   }
 }
 
+function clearRangeNum(){
+  minInput.value = "";
+  maxInput.value = "";
+}
+
 function updateMinMax() {
   minNum.innerText = minInput.value;
   maxNum.innerText = maxInput.value;
-  console.log(minInput.value);
-  clearText();
+}
+
+// custon range number js
+
+updateButton.addEventListener("click", customRangeNumber)
+
+function customRangeNumber(){
+  min = parseInt(minInput.value);
+  max = parseInt(maxInput.value);
+  randomNum = Math.floor(Math.random() * (max - min)) + min;
+  clearRangeNum();
 }
