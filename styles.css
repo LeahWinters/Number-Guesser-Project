@@ -264,6 +264,11 @@ button:hover,
 }
 
 /* styling for game card */
+.column2 {
+  display: flex;
+  flex-direction: column;
+}
+
 .game-card {
   margin: 25px 40px;
   padding:15px;
