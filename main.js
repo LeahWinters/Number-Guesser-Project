@@ -86,6 +86,7 @@ function guessResult1() {
     winningCard();
     player1Wins++;
     numCorrectGuess();
+    resetFields()
   }
   guessResult2();
 }
@@ -101,6 +102,7 @@ function guessResult2() {
     winningCard();
     player2Wins++;
     numCorrectGuess();
+    resetFields()
   }
 }
 
@@ -171,4 +173,11 @@ function winningCard() {
 
 function closeResultsCard(event){
   event.target.parentElement.parentElement.remove();
+}
+
+// js for reseting the fields
+
+function resetFields() {
+  player1Name.value = "";
+  player2Name.value = "";
 }
