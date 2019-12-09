@@ -18,9 +18,9 @@ var returnVal1 = document.getElementById("return-value1");
 var returnVal2 = document.getElementById("return-value2");
 var updateButton = document.getElementById("update-btn");
 // var closeButton = document.getElementById("close-button");
-// var guessHolder = 0;
-// var player1Wins = 0;
-// var player2Wins =0;
+var guessHolder = 0;
+var player1Wins = 0;
+var player2Wins =0;
 var column2 = document.getElementById("column-2");
 
 challengerForm.addEventListener("input", checkInputFields);
@@ -77,12 +77,12 @@ function submitGuess() {
   challenger1Name.innerText = player1Name.value;
   challenger2Name.innerText = player2Name.value;
   clearButton.disabled = true;
-  debugger
   guessResult1();
+  clearText();
 }
 
 function guessResult1() {
-  // guessHolder = guessHolder+2;
+  guessHolder = guessHolder+2;
   if (player1Guess.value < randomNum) {
      returnVal1.innerText = "That's too low!";
   } else if (player1Guess.value > randomNum) {
@@ -90,8 +90,9 @@ function guessResult1() {
   } else {
     returnVal1.innerText = "BOOM!";
     winningCard();
-    // player1Wins++;
-    // numCorrectGuess();
+    player1Wins++;
+    numCorrectGuess();
+
   }
   guessResult2();
 }
@@ -104,18 +105,18 @@ function guessResult2() {
   } else {
     returnVal2.innerText = "BOOM!";
     winningCard();
-    // player2Wins++;
-    // numCorrectGuess();
+    player2Wins++;
+    numCorrectGuess();
   }
 }
 
-// function numCorrectGuess(){
-//   var guessSpot = document.getElementById("guess-spot");
-//   console.log(guessSpot);
-//   guessSpot.innerText = guessHolder;
-//   guessHolder = 0;
-//   newCard();
-// }
+function numCorrectGuess(){
+  var guessSpot = document.getElementById("guess-spot");
+  console.log(guessSpot);
+  guessSpot.innerText = guessHolder;
+  guessHolder = 0;
+  // newCard();
+}
 
 // js for min max range box1
 
