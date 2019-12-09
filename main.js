@@ -17,29 +17,27 @@ var randomNum = generateNum();
 var returnVal1 = document.getElementById("return-value1");
 var returnVal2 = document.getElementById("return-value2");
 var updateButton = document.getElementById("update-btn");
-// var closeButton = document.getElementById("close-button");
 var guessHolder = 0;
 var player1Wins = 0;
-var player2Wins =0;
+var player2Wins = 0;
 var column2 = document.getElementById("column-2");
+
 
 challengerForm.addEventListener("input", checkInputFields);
 challengerForm.addEventListener("keyup", checkInputFields2);
 clearButton.addEventListener("click", clearInputs);
 submitButton.addEventListener("click", submitGuess);
-// closeButton.addEventListener("click", closeResultsCard);
 minInput.addEventListener("input", activateUpdateBtn);
 maxInput.addEventListener("input", activateUpdateBtn);
 updateButton.addEventListener("click", updateMinMax);
+
 
 
 function generateNum() {
   return Math.round(Math.random() * 100);
 }
 
-// function closeResultsCard(){
-//   closeButton.parentElement.parentElement.remove();
-// }
+
 
 function checkInputFields() {
   if(player1Name.value.length > 0 || player1Guess.value.length > 0 || player2Name.value.length > 0 || player2Guess.value.length > 0){
@@ -170,14 +168,21 @@ function winningCard() {
         </span> guesses</p>
       <p class="card-time"><span>1</span> minute <span>35
       </span> second</p>
-      <button class="close-card" id="close-button"> <img
-      src="https://image.flaticon.com/icons/svg/
-      458595.svg"></button>
+      <button class="close-card" id="close-button">X</button>
     </section>
   </div>`;
   column2.insertAdjacentHTML("afterbegin", text);
 }
 
+
+// console.log(#close-button);
+
+
+// function closeResultsCard(){
+//   var closeButton = document.getElementById("close-button");
+//   closeButton.addEventListener("click", closeResultsCard);
+//   closeButton.parentElement.parentElement.remove();
+// }
 // function newCard(){
 //   // element.insertAdjacentHTML(position, text);
 //   var text = `<div class="game-card" id="challenger1-card">
