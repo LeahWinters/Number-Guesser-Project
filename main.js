@@ -17,29 +17,27 @@ var randomNum = generateNum();
 var returnVal1 = document.getElementById("return-value1");
 var returnVal2 = document.getElementById("return-value2");
 var updateButton = document.getElementById("update-btn");
-// var closeButton = document.getElementById("close-button");
-// var guessHolder = 0;
-// var player1Wins = 0;
-// var player2Wins =0;
+var guessHolder = 0;
+var player1Wins = 0;
+var player2Wins = 0;
 var column2 = document.getElementById("column-2");
+
 
 challengerForm.addEventListener("input", checkInputFields);
 challengerForm.addEventListener("keyup", checkInputFields2);
 clearButton.addEventListener("click", clearInputs);
 submitButton.addEventListener("click", submitGuess);
-// closeButton.addEventListener("click", closeResultsCard);
 minInput.addEventListener("input", activateUpdateBtn);
 maxInput.addEventListener("input", activateUpdateBtn);
 updateButton.addEventListener("click", updateMinMax);
+
 
 
 function generateNum() {
   return Math.round(Math.random() * 100);
 }
 
-// function closeResultsCard(){
-//   closeButton.parentElement.parentElement.remove();
-// }
+
 
 function checkInputFields() {
   if(player1Name.value.length > 0 || player1Guess.value.length > 0 || player2Name.value.length > 0 || player2Guess.value.length > 0){
@@ -77,12 +75,12 @@ function submitGuess() {
   challenger1Name.innerText = player1Name.value;
   challenger2Name.innerText = player2Name.value;
   clearButton.disabled = true;
-  debugger
   guessResult1();
+  clearText();
 }
 
 function guessResult1() {
-  // guessHolder = guessHolder+2;
+  guessHolder = guessHolder+2;
   if (player1Guess.value < randomNum) {
      returnVal1.innerText = "That's too low!";
   } else if (player1Guess.value > randomNum) {
@@ -90,8 +88,9 @@ function guessResult1() {
   } else {
     returnVal1.innerText = "BOOM!";
     winningCard();
-    // player1Wins++;
-    // numCorrectGuess();
+    player1Wins++;
+    numCorrectGuess();
+
   }
   guessResult2();
 }
@@ -104,18 +103,18 @@ function guessResult2() {
   } else {
     returnVal2.innerText = "BOOM!";
     winningCard();
-    // player2Wins++;
-    // numCorrectGuess();
+    player2Wins++;
+    numCorrectGuess();
   }
 }
 
-// function numCorrectGuess(){
-//   var guessSpot = document.getElementById("guess-spot");
-//   console.log(guessSpot);
-//   guessSpot.innerText = guessHolder;
-//   guessHolder = 0;
-//   newCard();
-// }
+function numCorrectGuess(){
+  var guessSpot = document.getElementById("guess-spot");
+  console.log(guessSpot);
+  guessSpot.innerText = guessHolder;
+  guessHolder = 0;
+  // newCard();
+}
 
 // js for min max range box1
 
@@ -169,14 +168,21 @@ function winningCard() {
         </span> guesses</p>
       <p class="card-time"><span>1</span> minute <span>35
       </span> second</p>
-      <button class="close-card" id="close-button"> <img
-      src="https://image.flaticon.com/icons/svg/
-      458595.svg"></button>
+      <button class="close-card" id="close-button">X</button>
     </section>
   </div>`;
   column2.insertAdjacentHTML("afterbegin", text);
 }
 
+
+// console.log(#close-button);
+
+
+// function closeResultsCard(){
+//   var closeButton = document.getElementById("close-button");
+//   closeButton.addEventListener("click", closeResultsCard);
+//   closeButton.parentElement.parentElement.remove();
+// }
 // function newCard(){
 //   // element.insertAdjacentHTML(position, text);
 //   var text = `<div class="game-card" id="challenger1-card">
