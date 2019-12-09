@@ -21,7 +21,7 @@ var guessHolder = 0;
 var player1Wins = 0;
 var player2Wins = 0;
 var column2 = document.getElementById("column-2");
-
+var winnerName = null;
 
 challengerForm.addEventListener("input", checkInputFields);
 challengerForm.addEventListener("keyup", checkInputFields2);
@@ -31,13 +31,9 @@ minInput.addEventListener("input", activateUpdateBtn);
 maxInput.addEventListener("input", activateUpdateBtn);
 updateButton.addEventListener("click", updateMinMax);
 
-
-
 function generateNum() {
   return Math.round(Math.random() * 100);
 }
-
-
 
 function checkInputFields() {
   if(player1Name.value.length > 0 || player1Guess.value.length > 0 || player2Name.value.length > 0 || player2Guess.value.length > 0){
@@ -68,7 +64,6 @@ function clearText() {
 }
 
 function submitGuess() {
-  console.log(randomNum)
   checkInputFields2();
   innerTextOutput1.innerText = player1Guess.value;
   innerTextOutput2.innerText = player2Guess.value;
@@ -87,10 +82,10 @@ function guessResult1() {
     returnVal1.innerText = "That's too high!";
   } else {
     returnVal1.innerText = "BOOM!";
+    winnerName = player1Name.value;
     winningCard();
     player1Wins++;
     numCorrectGuess();
-
   }
   guessResult2();
 }
@@ -102,6 +97,7 @@ function guessResult2() {
     returnVal2.innerText = "That's too high!";
   } else {
     returnVal2.innerText = "BOOM!";
+    winnerName = player2Name.value;
     winningCard();
     player2Wins++;
     numCorrectGuess();
@@ -110,15 +106,11 @@ function guessResult2() {
 
 function numCorrectGuess(){
   var guessSpot = document.getElementById("guess-spot");
-  console.log(guessSpot);
   guessSpot.innerText = guessHolder;
   guessHolder = 0;
-  // newCard();
 }
 
 // js for min max range box1
-
-
 
 function activateUpdateBtn() {
   if(minInput.value.length > 0 && maxInput.value.length > 0) {
@@ -136,6 +128,7 @@ function clearRangeNum(){
 function updateMinMax() {
   minNum.innerText = minInput.value;
   maxNum.innerText = maxInput.value;
+  updateButton.disabled = true;
 }
 
 // custon range number js
@@ -150,8 +143,8 @@ function customRangeNumber(){
 }
 
 // card pop up js
-// submitButton.addEventListener("click", winningCard);
 
+var closeButton = null
 
 function winningCard() {
     var text = `<div class="game-card" id="challenger1-card">
@@ -160,7 +153,7 @@ function winningCard() {
       <p>challenger 2 name</p>
     </section>
     <section class="challenger-winner">
-      <h3 id="card-name">Challenger 2 name</h3>
+      <h3 id="card-name">${winnerName}</h3>
       <p id="winner">winner</p>
     </section>
     <section class="card-stats">
@@ -172,32 +165,10 @@ function winningCard() {
     </section>
   </div>`;
   column2.insertAdjacentHTML("afterbegin", text);
+  closeButton = document.getElementById("close-button");
+  closeButton.addEventListener("click", closeResultsCard);
 }
 
-
-// console.log(#close-button);
-
-
-// function closeResultsCard(){
-//   var closeButton = document.getElementById("close-button");
-//   closeButton.addEventListener("click", closeResultsCard);
-//   closeButton.parentElement.parentElement.remove();
-// }
-// function newCard(){
-//   // element.insertAdjacentHTML(position, text);
-//   var text = `<div class="game-card" id="challenger1-card">
-//     <section class="card-title">
-//       <p>challenger 1 name</p> <span id="vs">vs</span> <p>challenger 2 name</p>
-//     </section>
-//     <section class="challenger-winner">
-//       <h3 id="card-name">Challenger 2 name</h3>
-//       <p id="winner">winner</p>
-//     </section>
-//     <section class="card-stats">
-//       <p class="card-guess-num"><span id="guess-spot">0</span> guesses</p>
-//       <p class="card-time"><span>1</span> minute <span>35</span> second</p>
-//       <button class="close-card" id="close-button"> <img src="https://image.flaticon.com/icons/svg/458/458595.svg" alt="x image for close button"> </button>
-//     </section>
-//   </div>`;
-//   column2.insertAdjacentHTML("afterbegin", text);
-// }
+function closeResultsCard(event){
+  event.target.parentElement.parentElement.remove();
+}
