@@ -21,10 +21,17 @@
             <h3 class="range-header">Set Range</h3>
             <p class="range-text">Min Range</p>
             <input type="number" class="range-input" id="min-input"></input>
+            <div class="empty">
+              
+            </div>
           </div>
           <div class="box2">
             <p class="range-text">Max Range</p>
             <input type="number" class="range-input" id="max-input"></input>
+            <div class="error-msg">
+              <img src="icon/error-icon.svg">
+              <p>Must be less than min </p>
+            </div>
           </div>
           <div class="box3">
             <input type="button" value="update" id="update-btn" disabled>
