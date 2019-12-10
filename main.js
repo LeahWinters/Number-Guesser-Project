@@ -18,8 +18,6 @@ var returnVal1 = document.getElementById("return-value1");
 var returnVal2 = document.getElementById("return-value2");
 var updateButton = document.getElementById("update-btn");
 var guessHolder = 0;
-var player1Wins = 0;
-var player2Wins = 0;
 var column2 = document.getElementById("column-2");
 var winnerName = null;
 
@@ -35,6 +33,7 @@ function generateNum() {
   return Math.round(Math.random() * 100);
 }
 
+// can we name this something that relates to the clear button activation?
 function checkInputFields() {
   if(player1Name.value.length > 0 || player1Guess.value.length > 0 || player2Name.value.length > 0 || player2Guess.value.length > 0){
      clearButton.disabled = false;
@@ -43,6 +42,7 @@ function checkInputFields() {
      }
    }
 
+// can we name this something related to enabeling the submit button?
 function checkInputFields2() {
   if(player1Name.value.length > 0 && player1Guess.value.length > 0 && player2Name.value.length > 0 && player2Guess.value.length > 0){
     submitButton.disabled = false;
@@ -64,7 +64,6 @@ function clearText() {
 }
 
 function submitGuess() {
-  checkInputFields2();
   innerTextOutput1.innerText = player1Guess.value;
   innerTextOutput2.innerText = player2Guess.value;
   challenger1Name.innerText = player1Name.value;
@@ -84,7 +83,6 @@ function guessResult1() {
     returnVal1.innerText = "BOOM!";
     winnerName = player1Name.value;
     winningCard();
-    player1Wins++;
     numCorrectGuess();
     resetFields()
   }
@@ -100,7 +98,6 @@ function guessResult2() {
     returnVal2.innerText = "BOOM!";
     winnerName = player2Name.value;
     winningCard();
-    player2Wins++;
     numCorrectGuess();
     resetFields()
   }
@@ -109,7 +106,6 @@ function guessResult2() {
 function numCorrectGuess(){
   var guessSpot = document.getElementById("guess-spot");
   guessSpot.innerText = guessHolder;
-  guessHolder = 0;
 }
 
 // js for min max range box1
@@ -117,6 +113,7 @@ function numCorrectGuess(){
 function activateUpdateBtn() {
   if(minInput.value.length > 0 && maxInput.value.length > 0) {
     updateButton.disabled = false;
+    rangeErrorMessage()
   } else {
       updateButton.disabled = true;
   }
@@ -180,4 +177,16 @@ function closeResultsCard(event){
 function resetFields() {
   player1Name.value = "";
   player2Name.value = "";
+}
+
+var errorMessageDiv = document.querySelector(".error-msg");
+
+function rangeErrorMessage() {
+  if (parseInt(maxInput.value) < parseInt(minInput.value)) {
+    errorMessageDiv.innerHTML = `<img src="icon/error-icon.svg"><p id="errorMessage">Max must be higher than min</p>`
+    updateButton.disabled = true;
+  }else {
+    errorMessageDiv.innerHTML =''
+    updateButton.disabled = false;
+  }
 }
