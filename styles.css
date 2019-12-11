@@ -209,6 +209,11 @@ header h3 {
   height: 42px;
 }
 
+.input-fields p {
+  padding-left: 63%;
+  color: #dd1972;
+}
+
 .challenger-buttons {
   padding-top: 30px;
   display: flex;

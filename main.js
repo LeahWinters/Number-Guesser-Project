@@ -20,6 +20,8 @@ var updateButton = document.getElementById("update-btn");
 var guessHolder = 0;
 var column2 = document.getElementById("column-2");
 var winnerName = null;
+var currentMinRange = 1;
+var currentMaxRange = 100;
 
 challengerForm.addEventListener("input", checkInputFields);
 challengerForm.addEventListener("keyup", checkInputFields2);
@@ -69,7 +71,9 @@ function submitGuess() {
   challenger1Name.innerText = player1Name.value;
   challenger2Name.innerText = player2Name.value;
   clearButton.disabled = true;
+  submitButton.disabled = true;
   guessResult1();
+  // submitErrorMessage();
   clearText();
 }
 
@@ -125,6 +129,8 @@ function clearRangeNum(){
 }
 
 function updateMinMax() {
+  currentMinRange = minInput.value;
+  currentMaxRange = maxInput.value;
   minNum.innerText = minInput.value;
   maxNum.innerText = maxInput.value;
   updateButton.disabled = true;
@@ -183,10 +189,45 @@ var errorMessageDiv = document.querySelector(".error-msg");
 
 function rangeErrorMessage() {
   if (parseInt(maxInput.value) < parseInt(minInput.value)) {
-    errorMessageDiv.innerHTML = `<img src="icon/error-icon.svg"><p id="errorMessage">Max must be higher than min</p>`
+    errorMessageDiv.innerHTML = `<img src="icon/error-icon.svg"><p id="errorMessage">Max must be higher than min</p>`;
     updateButton.disabled = true;
   }else {
-    errorMessageDiv.innerHTML =''
+    errorMessageDiv.innerHTML = " ";
     updateButton.disabled = false;
   }
 }
+
+// var submErrorMess = document.getElementById("ply1error");
+// // submErrorMess.addEventListener("input", submitErrorMessage);
+// submitButton.addEventListener("click", submitErrorMessage);
+//
+//
+// function submitErrorMessage(){
+//   console.log(player1Guess.value);
+//   if (parseInt(player1Guess.value) < parseInt(currentMinRange)) {
+//     submErrorMess.innerHTML = `<img src="icon/error-icon.svg"><p id="errorMessage">Guess must be higher than min</p>`;
+//     submitButton.disabled = true;
+//   } else {
+//       submErrorMess.innerHTML = " ";
+//       submitButton.disabled = false;
+//     }
+// }
+
+// function submitErrorMessage() {
+//   console.log("CRAP")
+//   if(parseInt(player1Guess.value) < parseInt(minNum.value)) || (parseInt(player2Guess.value) < parseInt(minNum.value)) {
+//     submitErrorMessage.innerHTML = `<img src="icon/error-icon.svg"><p id="errorMessage">Guess must be higher than min</p>`;
+//     submitButton.disabled = true;
+//   } else if(parseInt(player1Guess.value) > parseInt(maxNum.value) || (parseInt(player2Guess.value) > parseInt(maxNum.value)) {
+//     submitErrorMessage.innerHTML = `<img src="icon/error-icon.svg"><p id="errorMessage">Guess must be lower than max</p>`;
+//     submitButton.disabled = true;
+//   } else {
+//     submitErrorMessage.innerHTML = " ";
+//     submitButton.disabled = false;
+//   }
+// }
+
+// else if (parseInt(player2Guess.value) < parseInt(minNum.value)) {
+//   submitErrorMessage.innerHTML = `<img src="icon/error-icon.svg"><p id="errorMessage">Guess must be higher than min</p>`;
+//   submitButton.disabled = true;
+// }
