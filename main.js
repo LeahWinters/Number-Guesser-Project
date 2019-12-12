@@ -1,3 +1,4 @@
+// Variables
 var clearButton = document.getElementById("clear-btn");
 var challengerForm = document.getElementById("gamer-form");
 var player1Name = document.getElementById("name-text1");
@@ -22,7 +23,10 @@ var column2 = document.getElementById("column-2");
 var winnerName = null;
 var currentMinRange = 1;
 var currentMaxRange = 100;
+var closeButton = null
+var errorMessageDiv = document.querySelector(".error-msg");
 
+// Event Listeners
 challengerForm.addEventListener("input", checkInputFields);
 challengerForm.addEventListener("keyup", checkInputFields2);
 clearButton.addEventListener("click", clearInputs);
@@ -31,11 +35,12 @@ minInput.addEventListener("input", activateUpdateBtn);
 maxInput.addEventListener("input", activateUpdateBtn);
 updateButton.addEventListener("click", updateMinMax);
 
+// Random number between 1 and 100
 function generateNum() {
   return Math.round(Math.random() * 100);
 }
 
-// can we name this something that relates to the clear button activation?
+// For challenger form buttons
 function checkInputFields() {
   if(player1Name.value.length > 0 || player1Guess.value.length > 0 || player2Name.value.length > 0 || player2Guess.value.length > 0){
      clearButton.disabled = false;
@@ -44,7 +49,6 @@ function checkInputFields() {
      }
    }
 
-// can we name this something related to enabeling the submit button?
 function checkInputFields2() {
   if(player1Name.value.length > 0 && player1Guess.value.length > 0 && player2Name.value.length > 0 && player2Guess.value.length > 0){
     submitButton.disabled = false;
@@ -73,7 +77,6 @@ function submitGuess() {
   clearButton.disabled = true;
   submitButton.disabled = true;
   guessResult1();
-  // submitErrorMessage();
   clearText();
 }
 
@@ -119,7 +122,7 @@ function activateUpdateBtn() {
     updateButton.disabled = false;
     rangeErrorMessage()
   } else {
-      updateButton.disabled = true;
+    updateButton.disabled = true;
   }
 }
 
@@ -148,8 +151,6 @@ function customRangeNumber(){
 }
 
 // card pop up js
-
-var closeButton = null
 
 function winningCard() {
     var text = `<div class="game-card" id="challenger1-card">
@@ -185,49 +186,12 @@ function resetFields() {
   player2Name.value = "";
 }
 
-var errorMessageDiv = document.querySelector(".error-msg");
-
 function rangeErrorMessage() {
   if (parseInt(maxInput.value) < parseInt(minInput.value)) {
-    errorMessageDiv.innerHTML = `<img src="icon/error-icon.svg"><p id="errorMessage">Max must be higher than min</p>`;
+    errorMessageDiv.innerHTML = `<img src="icon/error-icon.svg"><p id="errorMessage">Must be more than min</p>`;
     updateButton.disabled = true;
   }else {
     errorMessageDiv.innerHTML = " ";
     updateButton.disabled = false;
   }
 }
-
-// var submErrorMess = document.getElementById("ply1error");
-// // submErrorMess.addEventListener("input", submitErrorMessage);
-// submitButton.addEventListener("click", submitErrorMessage);
-//
-//
-// function submitErrorMessage(){
-//   console.log(player1Guess.value);
-//   if (parseInt(player1Guess.value) < parseInt(currentMinRange)) {
-//     submErrorMess.innerHTML = `<img src="icon/error-icon.svg"><p id="errorMessage">Guess must be higher than min</p>`;
-//     submitButton.disabled = true;
-//   } else {
-//       submErrorMess.innerHTML = " ";
-//       submitButton.disabled = false;
-//     }
-// }
-
-// function submitErrorMessage() {
-//   console.log("CRAP")
-//   if(parseInt(player1Guess.value) < parseInt(minNum.value)) || (parseInt(player2Guess.value) < parseInt(minNum.value)) {
-//     submitErrorMessage.innerHTML = `<img src="icon/error-icon.svg"><p id="errorMessage">Guess must be higher than min</p>`;
-//     submitButton.disabled = true;
-//   } else if(parseInt(player1Guess.value) > parseInt(maxNum.value) || (parseInt(player2Guess.value) > parseInt(maxNum.value)) {
-//     submitErrorMessage.innerHTML = `<img src="icon/error-icon.svg"><p id="errorMessage">Guess must be lower than max</p>`;
-//     submitButton.disabled = true;
-//   } else {
-//     submitErrorMessage.innerHTML = " ";
-//     submitButton.disabled = false;
-//   }
-// }
-
-// else if (parseInt(player2Guess.value) < parseInt(minNum.value)) {
-//   submitErrorMessage.innerHTML = `<img src="icon/error-icon.svg"><p id="errorMessage">Guess must be higher than min</p>`;
-//   submitButton.disabled = true;
-// }

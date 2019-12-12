@@ -1,9 +1,12 @@
+/* style sizing */
 @media only screen and (max-width 900px) {
   main {
     display: flex;
     flex-direction: row;
   }
 }
+
+/* style general rules */
 
 * {
   margin: 0;
@@ -13,22 +16,17 @@
   color: #606060;
 }
 
-/* styling for header */
+/* style for header */
 
 header {
   width: 100%;
   height: 140px;
   background-color: #404041;
-  color: #dd1972;
   text-align: center;
 }
 
 main {
   display: flex;
-}
-
-strong {
-  color: #dd1972;
 }
 
 .number-title {
@@ -38,6 +36,10 @@ strong {
   font-weight: lighter;
   margin-bottom: -13px;
   padding-top: 10px;
+}
+
+strong {
+  color: #dd1972;
 }
 
 header h3 {
@@ -55,7 +57,7 @@ header h3 {
   margin-bottom: 6px;
 }
 
-/* start of column1 styling */
+/* style for column1 */
 
 .column1,
 .column2{
@@ -78,19 +80,16 @@ header h3 {
 }
 
 .box1{
-  flex: 1;
   align-self: center;
 }
 
 .box2{
-  flex: 1;
   align-self: center;
   padding-top: 31px;
   padding-left: 25px;
 }
 
 .box3{
-  flex: 1;
   align-self: center;
   padding-right: 20px;
   padding-top: 3%;
@@ -113,15 +112,12 @@ header h3 {
   height: 42px;
 }
 
-.error-border {
-  border: 1px solid #dd1972;
-
-}
+/* style for error message */
 
 .error-msg {
   display: flex;
   margin-top: 6px;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .error-msg img {
@@ -136,6 +132,7 @@ header h3 {
 
 .empty {
   height: 30px;
+  margin-top: 6px;
 }
 
 
@@ -150,7 +147,7 @@ header h3 {
   font-weight: bold;
 }
 
-/* Start styling for Challenger Form */
+/* Style for challenger Form */
 
 .challenger span {
   text-decoration: underline;
@@ -233,7 +230,7 @@ header h3 {
   font-weight: bold;
 }
 
-/* start of latest-guess styling */
+/* style for latest-guess */
 
 .latest-guess {
   padding: 10px 20px 15px;
@@ -261,29 +258,12 @@ header h3 {
   color: #dd1792;
 }
 
-/* #return-value {
-  font-size: 21px;
-} */
-
-/* styling suedo elements for left column */
+/* style for suedo elements - left column */
 
 button:hover,
 .button input:hover {
   background-color: #dd1792;
 }
-
-/* start of colunm2 styling */
-
-.column2 {
-  background-color: #d0d2d3;
-}
-
-.guess-text {
-  font-size: 21px;
-}
-
-/* styling suedo elements for left column */
-
 
 .button input:disabled {
   background-color: #d0d2d3;
@@ -293,7 +273,18 @@ button:hover,
   background-color: #d0d2d3;
 }
 
+/* style for colunm2 */
+
+.column2 {
+  background-color: #d0d2d3;
+}
+
+.guess-text {
+  font-size: 21px;
+}
+
 /* styling for game card */
+
 .column2 {
   display: flex;
   flex-direction: column;
